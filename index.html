@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Algo Visualizer</div>
+      <div class="algorithms">
+        <select id="algorithm-select">
+          <option value="dijkstra">Dijkstra's Algorithm</option>
+          <option value="bridges">Bridges in Graph</option>
+        </select>
+      </div>
+    </nav>
+  </header>
+
+  <section class="toolbar">
+    <button id="line-tool">📏 Add Edge</button>
+    <button id="undo-btn">↩️ Undo</button>
+    <button id="redo-btn">↪️ Redo</button>
+    <div class="spacer"></div>
+    <button id="clear-btn">🧹 Clear</button>
+    <button id="run-btn">▶️ Run</button>
+  </section>
+
+  <main>
+    <div id="container">
+      <div id="grid"></div>
+      <div id="info-panel">
+        <h3>Run Info</h3>
+        <div>Path cost: <span id="path-cost">–</span></div>
+        <div>Bridges: <span id="bridge-count">–</span></div>
+      </div>
+    </div>
+    <svg id="edgeLayer"></svg>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
